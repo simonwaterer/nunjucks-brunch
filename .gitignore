@@ -7,3 +7,4 @@ lib/
 public/
 html-report/
 lcov.info
+.nyc_output/

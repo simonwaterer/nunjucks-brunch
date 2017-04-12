@@ -18,7 +18,7 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "mocha tests/test.js",
-    "coverage": "mocha tests/test.coffee --require coffee-coverage/register --compilers coffee:coffee-script/register --reporter mocha-lcov-reporter > lcov.info"
+    "coverage": "nyc --reporter=text-lcov mocha tests/test.js --reporter mocha-lcov-reporter > lcov.info"
   },
   "license": "MIT",
   "dependencies": {
@@ -28,12 +28,11 @@
   },
   "devDependencies": {
     "chai": "^1.10.0",
-    "coffee-script": "~1.9.0",
+    "codeclimate-test-reporter": "^0.0.4",
     "mocha": "^2.2.1",
-    "sinon": "^1.14.1",
-    "coffee-coverage": "^0.4.5",
     "mocha-lcov-reporter": "^0.0.2",
-    "codeclimate-test-reporter": "^0.0.4"
+    "nyc": "^10.2.0",
+    "sinon": "^1.14.1"
   },
   "bugs": {
     "url": "https://github.com/brunch/nunjucks-brunch/issues"
